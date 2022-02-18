@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-    	<link rel="icon" type="image/png" href="git/dof.png"/>﻿
-        
+        <link rel="icon" type="imagen/png" href="git/dof.png"/>﻿
         <title> Mis mascotas </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=divice-width, user-scalable=no, initial-seale=1, maximum-scale=1, minimum-scale=1">
-        <meta name="description" content="mascotas, perros">
-        <meta name="description" content="pagina para magangue">
-        <meta name="description" content=" mis mascotas sirve para adopcion">
         <link rel="stylesheet" href="css/fontello.css">
         <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet"  href="css/estilocontacto.css">
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
         <script type="text/javascript">
         $(window).load(function(){
@@ -20,7 +17,7 @@
         <style type="text/css">
         #loadPage {
         display:block;
-        background:#5DDBE4;
+        background:#53dfd6;
         color: white; 
         width: 100%;
         height: 100%;
@@ -42,22 +39,15 @@
     	margin:auto;          
     }
     </style>
-    
-    <style> 
+        <style> 
 	#ultimo + div{
 		visibility:hidden;
 	}
 	</style>
-      
         </head>
      <body>
 
 
-
-<script type="text/javascript">
-window.onload=function(){alert('Bienvenido a Mis Mascotas');}
-window.onunload=function(){alert('Vuelva en otro momento');}
-</script>
      <header>
 
      <div class="contenedor">
@@ -80,52 +70,42 @@ window.onunload=function(){alert('Vuelva en otro momento');}
      		<img src="img/banner.jpg">
      		<div class="contenedor">
      			<h2> Mascotas y niños felices</h2>
-     			<p> ¿ cual es la mejor mascota para usted?</p>
-     			<a href="http://bloggersandfamily.com/blog/2017/09/25/mascotas-ninos-consejos-convivencia/" target="_blank">Leer mas</a>
+                <p> ¿ cual es la mejor mascota para usted?</p>
+                <a href="http://bloggersandfamily.com/blog/2017/09/25/mascotas-ninos-consejos-convivencia/" target="_blank">Leer mas</a>
 
      		</div>
      	</section>
      	<section id="Bienvenidos">
-     		<h2>BIENVENIDOS A NUESTRO CLUB</h2>
-     		<p>lorem ipsum dolor sit amet, consectetur
-     		adipisicing elit. quidem ea eum alias reiciendis, tempore fugiat, distinctio nihil corrupti hic nostrum!</p>
+     		<h2>REGISTRATE A NUESTRO FORMULARIO</h2>
+     		<p> </p>
      		
-     	</section>
-     	<section id="blog">
-     		<h3> La Adopcion es Amar </h3>
-     		<div class="contenedor">
-     			<article>
-     				<img src="img/adopta1.jpg">
-     				<h4> Mascota adorable</h4>
-     			</article>
-     			<article>
-     				<img src="img/adopta2.jpg">
-     				<h4>La adopcion es responsable</h4>
-     			</article>
-     			<article>
-     				<img src="img/adopta3.jpg">
-     				<h4>Una vida por vivir </h4>
-     			</article>
-     			<article>
-     				<img src="img/adopta4.jpg">
-     				<h4> Mucho amor y cariño</h4>
-     			</article>
-     			<article>
-     				<img src="img/adopta5.jpg">
-     				<h4> La esperanza de la adopcion</h4>
-     			</article>
-     			
+       <h1> formulario de registro </h1> 
 
-     		</div>
-     		
-     	</section>
 
-     			
+       <form action="registrar.php" method="post" class="form-register" onsubmit="return"> 
+       <h2 class="form__titulo">CREA UNA CUENTA </h2> 
+       <div class="contenedor-inputs">
+       <input type="text" name="nombre" placeholder="nombre" class="input-50" required> 
+       <input type="text" name="apellidos" placeholder="Apellidos" class="input-50" required> 
+       <input type="email" name="email" placeholder="email" class="input-100" required> 
+       <input type="text" name="usuario" placeholder="Usuario" class="input-50" required> 
+       <input type="password" name="contraseña" placeholder="Contraseña" class="input-50" required> 
+       <input type="text" name="telefono" placeholder="Telefono" class="input-100" required> 
 
+       <input type="submit" value="Registrar" class="btn-enviar"> 
+       
+       
+   </form>
+   <?php 
+   if (isset ( $_POST['submit'])){
+   require("registrar.php")
+}
+   ?>
+    </div> 
      </main>
      <footer>
      	<div class="contenedor">
-     		<p class="copy"> Mis mascotas &copy  universidad cartagena sede magangue 2020</p>
+     		<p class="copy"> Mis mascotas &copy; universidad cartagena sede magangue 2020</p>
      		<div class="sociales">
      			<a class="icon-facebook-official" href="https://www.facebook.com/groups/320292478044056/about/" target="_blank"></a>
      			<a class="icon-instagram" href="https://www.instagram.com/vidaconperros/?hl=es-la" target="_blank"></a>
@@ -141,4 +121,6 @@ window.onunload=function(){alert('Vuelva en otro momento');}
      </footer>
      <div id="ultimo"></div>
      </body>
+
+
 </html>
